@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color:  #7f7f7f;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+p{
+    color: #565656;
+}
+
+/* Main/Parent container */
+
+#main{
+    max-width: 1200px;
+    width: 50%;
+    margin: 0 auto;
+    height: auto;
+    border-radius: 5px;
+    background-color: cornsilk;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+/* Heading of Todo Web App */
+
+#app-heading{
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.8rem;
+    color: brown;
+    margin: 10px;
+}
+
+/* Form to create task */
+
+/* ----description container ----*/
+
+#desc-container{
+    width: auto;
+    border-top: 1px solid #d7d7d7;
+    border-bottom: 1px solid #d7d7d7;
+    padding: 10px;
+    padding-bottom: 28px;
+}
+
+#due-date-container p, #category-container p{
+    display: inline;
+    font-size: 0.9rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#desc-container p{
+    padding-left: 2px;
+    padding-bottom: 5px;
+    display: inline;
+    font-size: 1.2rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#form-description{
+    width: 75%;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid black;
+    background: transparent;
+    font-size: 1rem;
+    opacity: 0.4;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 5px;
+}
+
+/*----- Category and date container of form------- */
+
+#category-date-container{
+    display: flex;
+}
+
+/* ---category container--- */
+
+#category-container{
+    width: 50%;
+    padding: 10px;
+    border-right: 1px solid #d7d7d7;
+}
+
+#category-heading{
+    padding-bottom: 5px;
+}
+
+/*------ Dropdown menu-------- */
+
+select{
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    font-size: 1.2rem;
+    opacity: 0.6;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 5px;
+}
+
+/* -----due date container----- */
+
+#due-date-container{
+    width: 50%;
+    padding-left: 10px;
+    padding: 10px;
+}
+
+#date-input-box{
+    width: 75%;
+    border: 0;
+    background-color: transparent;
+    font-size: 1.4rem;
+    opacity: 0.4;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* -----Button Container------ */
+
+.buttons-container{
+    display: flex;
+    justify-content: center;
+    padding: 25px;
+    border-top: 1px solid rgba(0,0,0,0.247);
+    border-bottom: 1px solid rgba(0,0,0,0.247);
+}
+
+/* -----Add Task----- */
+
+.add-button{
+    background-color: darkblue;
+    color: white;
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+    font-size: 1.1rem;
+    padding: 14px;
+    margin-right: 25px;
+    cursor: pointer;
+}
+
+/* -----Delete Task----- */
+
+.delete-button{
+    background-color: #ed3824;
+    color: white;
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+    font-size: 1.1rem;
+    margin-right: 3px;
+    cursor: pointer;
+}
+
+/* Button's Hover Properties */
+
+.add-button:hover {
+    background: #101010;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.delete-button:hover {
+    background: #890f00;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+
+/***** TODO List or Task List *****/
+/* THIS IS CHANGE COLOR EVEN NUMBERED OF TAKS LIST */
+#task:nth-child(2n) {
+    background: #fbfbfb;
+}
+
+/* THIS IS CHANGE COLOR ODD NUMBERED OF TAKS LIST */
+#task:nth-child(2n+1) {
+    background: #f7f7f7;
+}
+
+/* Various hover mouse effects  */
+#task:hover, .category-date-container:hover, #description-container:hover {
+    background-color: #e1e1e1;
+}
+
+/* Div containing all tasks in the database  */ 
+.show {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    /* background-color: red; */
+    /* height: 180px; */
+    /* overflow-x: scroll; */
+}
+
+/*** Flex box of each task ***/
+
+#task {
+    flex: 0 0 50px;
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-evenly;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.226);
+    padding-bottom: 10px;
+    padding-top: 15px;
+}
+
+/* CATEGORY BOX of task list */
+#task-category {
+    background-color: #f1a500;
+    color: aliceblue;
+    height: 18px;
+    width: 70px;
+    padding: 10px;
+    font-size: 0.8rem;
+    text-align: center;    
+    font-family: Baskerville, sans-serif;
+    text-transform: uppercase;
+    box-shadow: 0 2px 3px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+/* Task Description in TODO list */
+#task-description {
+    color: #565656;
+    font-size: 1.1rem;
+}
+
+/* Task Due Date in TODO list */
+#task-date {
+    color: rgb(157, 159, 160);
+    font-size: 0.8rem;
+}
+
+/* Checkbox */
+#check-box {
+    outline: 2px solid #525252;
+    color: blueviolet;
+    margin-top: 10px;
+}
+
+
+/* Cross/Remove Icon to delete individual task */
+
+#remove-task-icon {
+    font-size: 1.3rem;
+    padding: 10px;
+}
+
+#remove-task-icon a {
+    color: red;
+}
